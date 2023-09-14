@@ -1,5 +1,9 @@
 import { Move, PokeApiResponse } from './interfaces/pokeapi-response.interface';
-import { PokeApiAdapter, PokeApiFetchAdapter } from '../api/pokeApi.adapter';
+import {
+  HttpAdapter,
+  PokeApiAdapter,
+  PokeApiFetchAdapter,
+} from '../api/pokeApi.adapter';
 
 export class Pokemon {
   get imageUrl() {
@@ -9,7 +13,7 @@ export class Pokemon {
   constructor(
     public readonly id: number,
     public name: string,
-    private readonly http: PokeApiAdapter
+    private readonly http: HttpAdapter
   ) {}
 
   public scream() {
