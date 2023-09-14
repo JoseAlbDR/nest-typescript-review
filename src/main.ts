@@ -2,9 +2,10 @@ import './style.css';
 import typescriptLogo from './typescript.svg';
 import viteLogo from '/vite.svg';
 import { setupCounter } from './counter.ts';
-import { charmander } from './bases/02-objects.ts';
+import { charmander } from './bases/03-classes.ts';
 
-console.log(charmander);
+console.log(charmander.imageUrl);
+charmander.scream();
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
