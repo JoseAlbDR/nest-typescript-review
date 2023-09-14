@@ -6,6 +6,7 @@ import { charmander } from './bases/03-classes.ts';
 
 console.log(charmander.imageUrl);
 charmander.scream();
+console.log(await charmander.getMoves());
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
