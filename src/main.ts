@@ -2,12 +2,13 @@ import './style.css';
 import typescriptLogo from './typescript.svg';
 import viteLogo from '/vite.svg';
 import { setupCounter } from './counter.ts';
-import { charmander } from './bases/04-inyection.ts';
+import { charmander } from './bases/05-decorators.ts';
 
-console.log(charmander.imageUrl);
+// console.log(charmander.imageUrl);
+// charmander.scream();
+// console.log(await charmander.getMoves());
 charmander.scream();
-console.log(await charmander.getMoves());
-
+charmander.speak();
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
