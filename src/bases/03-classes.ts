@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { IPokemon } from './interfaces/pokeapi-response.interface';
 
 export class Pokemon {
   get imageUrl() {
@@ -20,7 +21,7 @@ export class Pokemon {
   }
 
   async getMoves() {
-    const { data } = await axios.get(
+    const { data } = await axios.get<IPokemon>(
       'https://pokeapi.co/api/v2/pokemon/charmander'
     );
 
